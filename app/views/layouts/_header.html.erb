@@ -1,12 +1,15 @@
 <div id="top">
 <header class="navbar navbar-fixed-top navbar-inverse">
 	<div class="container">
-		<%= link_to "APP..",root_path,id: "logo" %>
+		<%= link_to "Get It Now",root_path,id: "logo" %>
 		<ul class="nav navbar-nav navbar-right">
-		   <li><%= link_to "Sign Up",'/signup' %></li>
-		   <li><%= link_to "Log In",'/login' %></li> 
 		   <% if logged_in? %>
 		    <li><%= link_to "logout", logout_path, method: :delete %></li>
+			<li><%= link_to "add post",new_product_path,method: :get %></li> 
+			
+			<% else %>
+					   <li><%= link_to "Sign Up",'/signup' %></li>
+		   <li><%= link_to "Log In",'/login' %></li> 
 		    <% end %>
 		</ul>
 	</div>

@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+		var loc =document.getElementById("ent");
+		window.onload=function mylocation(){
+		if(navigator.geolocation){
+			navigator.geolocation.getCurrentPosition(showPosition);
+			console.log("hello");
+		}
+		}
+		function showPosition(position){
+			document.getElementById("ent").innerHTML="<div @user.address='"+position.coords.longitude+"'></div>";
+			console.log("hi");
+		}

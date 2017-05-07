@@ -8,6 +8,10 @@
 
   <%= f.label :email %>
   <%= f.text_field :email %>
+  
+  
+  <%= f.label :phone %>
+  <%= f.text_field :phone %>
 
   <%= f.label :password %>
   <%= f.password_field :password %>
@@ -15,9 +19,11 @@
   <%= f.label :password_confirmation, "confirmation" %>
   <%= f.password_field :password_confirmation %>
 
-
+ <div id="ent">
+ </div>
   <%= f.submit "create account",class:"btn btn-primary"%>
  <% end %>
  </div>
  </div>
+
 
